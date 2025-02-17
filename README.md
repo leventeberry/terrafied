@@ -1,4 +1,4 @@
-# Terraform Boilerplate Setup CLI
+# Terrified (A Terraform Boilerplate Setup CLI)
 
 ## Introduction
 This is a cross-platform CLI tool for generating a Terraform project structure with essential configuration files. It works on **Windows (CMD, PowerShell), Mac (Terminal), and Linux (Terminal)**. The CLI tool asks a series of questions and then sets up a Terraform project folder with a boilerplate configuration.
@@ -13,14 +13,14 @@ This is a cross-platform CLI tool for generating a Terraform project structure w
 ## Prerequisites
 Ensure you have the following installed before running this CLI tool:
 
-- **Node.js** (for JavaScript version) - [Download Node.js](https://nodejs.org/)
+- **Node.js** (required runtime environment) - [Download Node.js](https://nodejs.org/)
 
 ## Installation & Setup
 
 ### **1. Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/terraform-setup-cli.git
-cd terraform-setup-cli
+git clone https://github.com/leventeberry/terrafied.git
+cd terrafied
 ```
 
 ### **2. Run the JavaScript Version**
@@ -31,15 +31,7 @@ cd terraform-setup-cli
    ```
 2. Run the CLI:
    ```sh
-   node setup-terraform.js
-   ```
-3. (Optional) Install globally for ease of use:
-   ```sh
-   npm link
-   ```
-   Now, you can run it as a command:
-   ```sh
-   setup-terraform
+   npm start
    ```
 
 ## Usage
