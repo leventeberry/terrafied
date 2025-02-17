@@ -76,5 +76,5 @@ my-infra/
 This project is licensed under the **MIT License**. See the LICENSE file for details.
 
 ## Author
-**Your Name** - [GitHub Profile](https://github.com/yourusername)
+**LeVente Berry Jr.** - [GitHub Profile](https://github.com/leventeberry)
 
