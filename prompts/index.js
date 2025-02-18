@@ -1,5 +1,32 @@
 import { input, select } from "@inquirer/prompts";
 
+export async function getOS() {
+    const os = await select(
+        {
+            message: "Choose an operating system:",
+            choices: [
+                {
+                    name: 'linux',
+                    value: 'linux',
+                    description: 'Linux is a family of open-source Unix-like operating systems'
+                },
+                {
+                    name: 'macos',
+                    value: 'macos',
+                    description: 'macOS is a proprietary graphical operating system developed and marketed by Apple Inc.'
+                },
+                {
+                    name: 'windows',
+                    value: 'windows',
+                    description: 'Microsoft Windows is a group of several graphical operating system families'
+                }
+            ],
+            default: 'linux'
+        }
+    );
+    return os;
+}
+
 export async function getProjectName() {
     const projectName = await input({ message: "Enter a project name:", default: 'terraform_project' });
     return projectName;

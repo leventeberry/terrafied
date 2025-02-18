@@ -2,30 +2,31 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export default async function createTerraformFiles(baseDir, config) {
-    const mainTf = `provider "${config.provider}" {
-    region = "${config.region}"
+    const mainTf = `resource "aws_instance" "example" {
+  ami           = "ami-053a45fff0a704a47"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "example-instance"
   }
-  
-  resource "aws_s3_bucket" "example" {
-    bucket = "my-example-bucket"
-    acl    = "private"
-  }`;
+}`;
   
     const variablesTf = `variable "region" {
     description = "AWS region"
     type        = string
+    default     = "${config.region}"
   }`;
   
     const providerTf = `terraform {
     required_providers {
       ${config.provider} = {
         source  = "hashicorp/${config.provider}"
-        version = "~> 3.0"
+        version = "~> 5.87.0"
       }
     }
   }
   
   provider "${config.provider}" {
+    profile = "YOUR_AWS_PROFILE"
     region = var.region
   }`;
   
